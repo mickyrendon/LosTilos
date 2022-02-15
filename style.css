@@ -7,6 +7,7 @@
     font-weight: 500;
     letter-spacing:0.2rem;
     background: rgba(243, 234, 234, 0.144);
+    /* @import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css') */
 }
 /* shared properties */
 nav, .logo, section{   
@@ -23,6 +24,7 @@ nav{
 }
 img, .menu-btn{
     height:100%;
+    
 }
 .logo, .menu-btn{
     width: 2.5rem;
@@ -72,14 +74,14 @@ img, .menu-btn{
     border: none;
     
   }
-  .contact-btn span {
+.contact-btn span {
     position: relative;
     display: block;
     width: 100%;
     height: 100%;
   }
-  .contact-btn:before,
-  .contact-btn:after {
+.contact-btn:before,
+.contact-btn:after {
     position: absolute;
     content: "";
     right: 0;
@@ -87,29 +89,29 @@ img, .menu-btn{
     background: #537c01b4;
     transition: all 0.3s ease;
   }
-  .contact-btn:before {
+.contact-btn:before {
     height: 0%;
     width: 2px;
   }
-  .contact-btn:after {
+.contact-btn:after {
     width: 0%;
     height: 2px;
   }
-  .contact-btn:hover{
+.contact-btn:hover{
      background: transparent;
     box-shadow: none;
   }
-  .contact-btn:hover:before {
+.contact-btn:hover:before {
     height: 100%;
   }
-  .contact-btn:hover:after {
+.contact-btn:hover:after {
     width: 100%;
   }
-  .contact-btn span:hover{
+.contact-btn span:hover{
      color:#674203;
   }
-  .contact-btn span:before,
-  .contact-btn span:after {
+.contact-btn span:before,
+.contact-btn span:after {
     position: absolute;
     content: "";
     left: 0;
@@ -118,25 +120,25 @@ img, .menu-btn{
     background: #537c01b4;
     transition: all 0.3s ease;
   }
-  .contact-btn span:before {
+.contact-btn span:before {
     width: 2px;
     height: 0%;
   }
-  .contact-btn span:after {
+.contact-btn span:after {
     width: 0%;
     height: 2px;
   }
-  .contact-btn span:hover:before {
+.contact-btn span:hover:before {
     height: 100%;
   }
-  .contact-btn span:hover:after {
+.contact-btn span:hover:after {
     width: 100%;
   }
   
-  main{
+main{
     margin-top:0.5rem;
   }
-  section{
+section{
     margin: 1.5rem 0;
     padding: 1rem;
     flex-direction: column;
@@ -145,13 +147,39 @@ img, .menu-btn{
     /* box-shadow: 1px 1px 4px 3px rgba(0, 0, 0, 0.26); */
     box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.26);
   }
-  p, span{
-    font-size: 0.6rem;
-    line-height: 2.7;
-  }
-  p{
-    text-align: center;
-  }
-  ul{
-    list-style:none;
-  }
+p, span{
+  line-height: 2.7;
+}
+span{
+  /* cambiar a padding 0 en las mediaqueries */
+  padding-left: 0.7rem;
+}
+p{
+  font-size: 0.6rem;
+  text-align: center;
+}
+.services-list{
+  padding: 0;
+  list-style:none;
+}
+li{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  /* text-align:left; */
+}
+li span{
+  font-size: 0.6rem;
+}
+svg{
+  justify-content: flex-start;
+}
+
+.contact{
+  /* cambiar flex direction por row wrap en el mediaquery */
+}
+article{
+  margin-top:2rem;
+  display: block;
+  text-align: center;
+}
