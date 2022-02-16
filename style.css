@@ -2,29 +2,63 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Cinzel Decorative', cursive;
+    font-family: 'Cinzel Decorative', cursive, Arial, Helvetica, sans-serif;
     font-size: 1rem;
     font-weight: 500;
     letter-spacing:0.2rem;
-    background: rgba(243, 234, 234, 0.144);
-    /* @import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css') */
+    /* background: rgba(243, 234, 234, 0.144); */
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+a{
+  text-decoration: none;
+  color:currentColor;
 }
 /* shared properties */
-nav, .logo, section{   
+nav, .logo, section, footer, .address-map{   
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 nav, main, footer{
-  padding:0.5rem 1rem;
+  padding:0.5rem;
+  box-shadow: 0px -1px 7px 0px rgba(0, 0, 0, 0.25882352941176473);
 }
 nav{
   height: 3rem;
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25882352941176473);
+  
     /* background: currentColor; */
+}
+.nav-contact{
+  margin: 2rem 0;
+  box-shadow: 0px 0px 0px 0px transparent;
 }
 img, .menu-btn{
     height:100%;
-    
 }
 .logo, .menu-btn{
     width: 2.5rem;
@@ -41,6 +75,7 @@ img, .menu-btn{
     background-size:1.5rem;
     background-repeat: no-repeat;
     background-position: center;
+    background-color: transparent;
     border: none;
 }
 
@@ -137,6 +172,7 @@ img, .menu-btn{
   
 main{
     margin-top:0.5rem;
+    padding: 1rem;
   }
 section{
     margin: 1.5rem 0;
@@ -182,4 +218,44 @@ article{
   margin-top:2rem;
   display: block;
   text-align: center;
+}
+footer{
+  padding-bottom: 2rem;
+  display: block;
+}
+footer, .signature{
+  background-color: #55762fc2;
+}
+.img-footer{
+  width: 8rem;
+  align-self: center;
+}
+.logo-address{
+  display:flex;
+  justify-content: center;
+  flex-flow: column nowrap;
+}
+.address{
+  padding: 0;
+  color: aliceblue;
+}
+.address li{
+  justify-content: center;
+}
+.address-span{
+    padding: 0;
+}
+/* cambiar mediaquery de addres-map */
+iframe{
+  width: 12rem;
+  border-radius:0.2rem;
+}
+.signature{
+/* cambiar a flex-end en el mediaquery */
+  justify-content: center;
+}
+.signature span, .signature a{
+  font-size: 0.6rem;
+  text-align: right;
+  color: #dae6cce5;
 }
