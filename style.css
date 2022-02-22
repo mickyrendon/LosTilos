@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Cinzel Decorative', cursive, Arial, Helvetica, sans-serif;
+    font-family: 'Cinzel Decorative', cursive;
     font-size: 1rem;
     font-weight: 500;
     letter-spacing:0.2rem;
@@ -49,7 +49,8 @@ nav, main, footer{
 }
 nav{
   height: 3rem;
-  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25882352941176473);
+  box-shadow: 0px -4px 3px -4px #000 inset;
+  /* box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25882352941176473); */
   
     /* background: currentColor; */
 }
@@ -65,10 +66,10 @@ img, .menu-btn{
 }
 .img-logo{
     height: 2.5rem;
-    border: 1px solid #e2d7d7c7;
-    border-radius: 50%;
-    width: 2.5rem;
-    overflow: hidden;
+    /* width: 2.5rem;/ */
+    /* overflow: hidden; */
+    /* border: 1px solid #e2d7d7c7;
+    border-radius: 50%; */
 }
 .menu-btn{
     background-image: url(./assets/three-dots.svg);
@@ -208,7 +209,7 @@ li{
   /* text-align:left; */
 }
 li span{
-  font-size: 0.6rem;
+  font-size: 0.7rem;
 }
 svg{
   justify-content: flex-start;
@@ -239,6 +240,7 @@ footer, .signature{
   flex-flow: column nowrap;
 }
 .address{
+  margin: 0;
   padding: 0;
   color: aliceblue;
 }
