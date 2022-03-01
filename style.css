@@ -59,10 +59,12 @@ nav{
   box-shadow: 0px 0px 0px 0px transparent;
 }
 .sticky-nav{
-  position: sticky;
+  /* position: sticky;  poner en el mediaquerie*/
   top: 0;
   z-index: 4;
   background-color: rgba(255, 255, 255, 0.966);
+
+  position: -webkit-sticky; /*safari*/
 }
 img, .menu-btn{
     height:100%;
@@ -85,6 +87,21 @@ img, .menu-btn{
     background-color: transparent;
     border: none;
 }
+/* menu mobile */
+.menu-mobile-container{
+  padding: 1rem;
+  width: 80%;
+  height: 100%;
+  position:absolute;
+  background-color: rgba(255, 255, 255, 0.966);
+  border: 0.5px solid rgba(168, 168, 168, 0.877);
+  border-top: none;
+  border-bottom: none;
+  border-left: none;
+  z-index: 5;
+  scroll-behavior: unset;
+}
+
 .carousel{
     background-color: #55762fc2;
 }
