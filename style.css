@@ -52,7 +52,7 @@ nav, main, footer{
 }
 nav{
   height: 3rem;
-  box-shadow: 0px -4px 3px -4px #000 inset;
+  box-shadow: 0px -3px 2px -3px #000 inset;
   /* box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25882352941176473); */
   
     /* background: currentColor; */
@@ -63,11 +63,12 @@ nav{
 }
 .sticky-nav{
   /* position: sticky;  poner en el mediaquerie*/
-  top: 0;
-  z-index: 4;
+  /* top: 0;
+  z-index: 4; */
+  height: 3.5rem;
   background-color: rgba(255, 255, 255, 0.966);
 
-  position: -webkit-sticky; /*safari*/
+  /* position: -webkit-sticky; safari */
 }
 img, .menu-btn{
     height:100%;
@@ -83,14 +84,19 @@ img, .menu-btn{
     border-radius: 50%; */
 }
 .menu-btn{
-    background-image: url(./assets/three-dots.svg);
-    background-size:1.5rem;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: transparent;
-    border: none;
+  height: 1.5rem;
+  background-color: transparent;
+  border: none;
 }
 /* menu mobile */
+.opacity-container{
+  width: 100%;
+  height: 100%;
+  display: none;
+  position:absolute; 
+  z-index: 6;
+  background-color: rgba(0, 0, 0, 0.568); 
+}
 .menu-mobile-container{
   padding: 1rem;
   width: 80%;
@@ -99,13 +105,21 @@ img, .menu-btn{
   flex-flow: column wrap;
   align-items: flex-end;
   position:absolute;
+  left: -350px;
   background-color: rgb(255, 255, 255);
-  border: 0.5px solid rgba(168, 168, 168, 0.877);
-  border-top: none;
-  border-bottom: none;
-  border-left: none;
-  z-index: 5;
+  border-right: 0.5px solid rgba(168, 168, 168, 0.877);
+  z-index: 7;
   scroll-behavior: unset;
+  transition: all 0.4s linear;
+}
+.opacity-container.active, .menu-mobile-container.active{
+  transition: all 0.4s linear;
+}
+.opacity-container.active{
+  display: flex;
+}
+.menu-mobile-container.active{
+  left: 0;
 }
 .ul-list{
   margin: 1rem 0 0;
@@ -114,8 +128,15 @@ img, .menu-btn{
   display:flex;
   flex-flow: column wrap;
 }
+.ul-list a{
+  border-bottom: 0.5px solid #55762fc2;
+}
+.ul-list a:hover{
+  color: #985300;
+}
 .ul-list li{
   margin: 1rem 0;
+  padding-left: 0.5rem;
 }
 .close{
   width: 2rem;
@@ -123,9 +144,16 @@ img, .menu-btn{
   background-color: transparent;
   border: 0.5px solid #55762fc2;
 }
+.close::after{
+  animation: undoRotate .5s ease-in-out;
+}
+.rotate{
+  animation: rotate .5s ease-in;
+}
 .no-scroll{
   overflow: hidden;
 }
+
 .carousel{
   background-color: #55762fc2;
 }
@@ -318,4 +346,16 @@ iframe{
   font-size: 0.6rem;
   text-align: right;
   color: #dae6cce5;
+}
+
+
+/* keyframes */
+
+@keyframes rotate{
+  10% {transform: rotate(-180deg);}
+}
+
+@keyframes undoRotate {
+  10% {transform: rotate(-180deg);}
+  0% {transform: rotate(0deg);}
 }

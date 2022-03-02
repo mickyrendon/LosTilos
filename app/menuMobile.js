@@ -1,23 +1,16 @@
+const opacityContainer = document.querySelector('.opacity-container');
 const menuContainer = document.querySelector('.menu-mobile-container');
-      menuContainer.style.display = 'none';
 const menuBtn = document.querySelector('.menu-btn');
 const close = document.querySelector('.close');
-      close.style.display = 'none';
-// evento
-menuBtn.addEventListener('click', dropdown, true);
 
-function dropdown(e){
-    let status = menuContainer.style.display;
-    console.log('clickeando menu mobile');
-
-    if(status == 'none'){
+// event
+const dropdown = () =>{
+    opacityContainer.classList.toggle('active');
+    menuContainer.classList.toggle('active');
+    document.body.classList.add('no-scroll');
+    close.classList.add('rotate');
+    // close.classList.toggle('undoRotate');
     
-        console.log('menu desplegado');
-        // efecto sandwich e.target
-        // e.target.style.background = 'red';
-        menuContainer.style.display = 'flex';
-        close.style.display = 'block'
-        document.body.classList.add('no-scroll');
-        
-    }
+    console.log('menu desplegado');
 }
+menuBtn.addEventListener('click', dropdown, true);
