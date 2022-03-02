@@ -37,6 +37,9 @@ a{
   text-decoration: none;
   color:currentColor;
 }
+h3{
+  text-align: center;
+}
 /* shared properties */
 nav, .logo-text, .logo, section, footer, .address-map{   
     display: flex;
@@ -92,8 +95,11 @@ img, .menu-btn{
   padding: 1rem;
   width: 80%;
   height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-end;
   position:absolute;
-  background-color: rgba(255, 255, 255, 0.966);
+  background-color: rgb(255, 255, 255);
   border: 0.5px solid rgba(168, 168, 168, 0.877);
   border-top: none;
   border-bottom: none;
@@ -101,11 +107,34 @@ img, .menu-btn{
   z-index: 5;
   scroll-behavior: unset;
 }
-
-.carousel{
-    background-color: #55762fc2;
+.ul-list{
+  margin: 1rem 0 0;
+  padding: 0;
+  width: 100%;
+  display:flex;
+  flex-flow: column wrap;
 }
-
+.ul-list li{
+  margin: 1rem 0;
+}
+.close{
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+  border: 0.5px solid #55762fc2;
+}
+.no-scroll{
+  overflow: hidden;
+}
+.carousel{
+  background-color: #55762fc2;
+}
+.carousel-inner{
+  height: auto;
+}
+.d-block{
+  height: 228.75px;
+}
 /* contact btn */
 
 .custom-btn {
@@ -221,7 +250,7 @@ p{
   font-size: 0.6rem;
   text-align: center;
 }
-.services-list{
+.services-list, .rate-list{
   padding: 0;
   list-style:none;
 }
@@ -240,6 +269,9 @@ svg{
 
 .contact{
   /* cambiar flex direction por row wrap en el mediaquery */
+}
+.profile-pic{
+  width: 10rem;
 }
 article{
   margin-top:2rem;

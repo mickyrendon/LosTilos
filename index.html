@@ -25,16 +25,16 @@
             <i class="bi bi-x-lg close-icon"></i>
         </button>
         <ul class="ul-list">
-            <a href="#accordionFlushExample" class="services-anchor">
-                <li>Servicios</li>
-            </a>
-            <a href="#productos" class="products-anchor">
-                <li>Productos</li>
-            </a>
-            <a href="#nosotros" class="us-anchor">
+            <a href="#us" class="us-anchor">
                 <li>Nosotros</li>
             </a>
-            <a href="#consultas" class="questions-anchor">
+            <a href="#services" class="services-anchor">
+                <li>Servicios</li>
+            </a>
+            <a href="#rates" class="products-anchor">
+                <li>Tarifas y medios de pago</li>
+            </a>
+            <a href="#contact" class="questions-anchor">
                 <li>Consultas</li>
             </a>
             <a href="#contacto" class="contact-anchor">
@@ -61,16 +61,36 @@
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="./assets/logo/losTilosLogo.png" class="d-block w-100" alt="...">
+                <img src="./assets/pictures/mesa.jpg" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="./assets/logo/losTilosLogo.png" class="d-block w-100" alt="...">
+                <img src="./assets/pictures/living.jpg" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="./assets/logo/losTilosLogo.png" class="d-block w-100" alt="...">
+                <img src="./assets/pictures/tv.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/pictures/cocina.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/pictures/habitacion1.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/pictures/habitacion3.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/pictures/bano1.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/pictures/directv.jpg" class="d-block w-100" alt="...">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -89,13 +109,13 @@
         </button>
     </nav>
     <main>
-        <section class="description">
+        <section id="us" class="description">
             <h3>LOS TILOS</h3>
             <P>
                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid molestiae similique blanditiis iure sunt. Facilis beatae sequi culpa quae excepturi laboriosam nesciunt nam ut. Accusamus quas neque veniam non quae!
             </P>
         </section>
-        <section class="services">
+        <section id="services" class="services">
             <h3>servicios</h3>
             <ul class="services-list">
                 <li>
@@ -181,12 +201,22 @@
                 </li>
             </ul>
         </section>
-        <section class="contact">
-            <!-- <img src="" alt=""> -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+        <section id="rates">
+            <h3>Tarifas y medios de pago</h3>
+            <ul class="rate-list">
+                <li><i class="icono"></i><span>$45.000 por noche</span></li>
+            </ul>
+            <ul class="rate-list">
+                <li><i class="icono"></i><span>Transferencia Bancaria</span></li>
+                <li><i class="icono"></i><span>Efectivo</span></li>
+            </ul>
+        </section>
+        <section id="contact" class="contact">
+            <img class="profile-pic" src="./assets/circleProfile.png" alt="profile pic">
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
                 <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-              </svg>
+              </svg> -->
               <article>
                 <h3>Hola soy Lorenzo!</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, dignissimos quaerat eos esse tenetur officiis ex iure commodi error vel, maxime obcaecati perspiciatis quod, saepe libero. Animi minima officiis debitis.</p>
@@ -216,6 +246,7 @@
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script src="./app/menuMobile.js"></script>
+<script src="./app/closeBtn.js"></script>
 <!-- animate.css -->
-<script src="./scrollanimations.min.js"></script>
+<!-- <script src="./scrollanimations.min.js"></script> -->
 </html>
