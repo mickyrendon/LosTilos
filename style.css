@@ -282,8 +282,12 @@ p{
   padding: 0;
   list-style:none;
 }
+.services-list li, .rate-list li{
+  margin: 0.5rem 0;
+}
 .services-list img, .rate-list img, .address img{
   width: 1rem;
+  opacity: .8;
 }
 li{
   display: flex;
@@ -297,7 +301,13 @@ li span{
 svg{
   justify-content: flex-start;
 }
-
+.asterisco-container li{
+  width: 1rem;
+  text-align: center;
+}
+.asterisco-container i{
+  font-size:0.6rem;
+}
 .contact{
   /* cambiar flex direction por row wrap en el mediaquery */
 }
@@ -326,16 +336,18 @@ footer, .signature{
   flex-flow: column nowrap;
 }
 .address{
-  margin: 0;
-  padding: 0;
+  margin-top: 1rem;
+  padding: 0 1rem;
+  width: 15rem;
+  height: 4rem;
+  display: block;
+  align-self: center;
+  text-align: center;
   color: aliceblue;
 }
-.address li{
-  justify-content: center;
-}
-.address-span{
-    padding: 0;
-}
+/* .address span{
+  font-size: 0.7rem;
+} */
 /* cambiar mediaquery de addres-map */
 iframe{
   width: 12rem;
@@ -361,4 +373,19 @@ iframe{
 @keyframes undoRotate {
   10% {transform: rotate(-180deg);}
   0% {transform: rotate(0deg);}
+}
+
+/* mediaqueries */
+@media(max-width:250px){
+  li span, .address span{
+    font-size: 0.5rem;
+  }
+}
+@media(min-width:251)and(max-width:520px){
+  li span, .address span{
+    line-height: 1;
+  }
+  .address span{
+    font-size: 1rem;
+  }
 }
