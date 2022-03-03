@@ -101,7 +101,7 @@ img, .menu-btn{
   padding: 1rem;
   width: 80%;
   height: 100%;
-  display: none;
+  display: flex;
   flex-flow: column wrap;
   align-items: flex-end;
   position:absolute;
@@ -283,7 +283,7 @@ p{
   list-style:none;
 }
 .services-list img, .rate-list img, .address img{
-  width: 1.5rem;
+  width: 1rem;
 }
 li{
   display: flex;
