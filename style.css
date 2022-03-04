@@ -98,6 +98,8 @@ img, .menu-btn{
 }
 .contact-span{
   font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
 }
 /* menu mobile */
 .opacity-container{
@@ -198,10 +200,12 @@ img, .menu-btn{
   padding: 0;   
   width: 130px;
   height: 40px;
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   justify-content: center;
-  line-height: 3;
+  /* cambiar a un medida apropiada/ em, rem, ch */
+  line-height: 42px;
+  color: antiquewhite;
   background:#da983f;
   background: linear-gradient(0deg, #da973fb0 0%, #da973f 100%);
   border: none;
@@ -320,7 +324,7 @@ svg{
 }
 article{
   margin-top:2rem;
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   justify-content: space-around;
   text-align: center;
