@@ -293,11 +293,11 @@ p{
 }
 .services-list img, .rate-list img, .address img{
   /* width: 1.3rem; */
-  width:clamp(1rem, 0.70rem + 2vw, 2rem);
+  width:clamp(1.5rem, 1rem + 2vw, 2rem);
   opacity: .8;
 }
 .services-list span, .rate-list span{
-  padding-left: 0.7rem;
+  padding-left: 1rem;
 }
 li{
   display: flex;
