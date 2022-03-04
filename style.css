@@ -292,7 +292,8 @@ p{
   margin: 0.5rem 0;
 }
 .services-list img, .rate-list img, .address img{
-  width: 1rem;
+  /* width: 1.3rem; */
+  width:clamp(1rem, 0.70rem + 2vw, 2rem);
   opacity: .8;
 }
 .services-list span, .rate-list span{
