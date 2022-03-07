@@ -1,10 +1,20 @@
 :root{
+    /* global */
+    --body-max-width:80vw;
+    --display-flex:flex;
+    --center:center;
+    --column:column;
     --font-size:clamp(0.50rem, 0.70rem + 0.75vw, 1rem);
     --f-weight:500;
     --btn-margin:2rem 0;
 
-    /* meun --mobile/desktop */
+    /* menu --mobile/desktop */
     --menu-mobile-width: 80vw;
     --menu-middleScreen-width:45vw;
+    
+    /* desktop */
+    /* --menu-nav-height: */
     --menu-desktop-width: 35vw;
+    /*grid */
+    --grid:grid;
 }
