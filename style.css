@@ -14,12 +14,12 @@
   letter-spacing:0.2rem;
   /* background: rgba(243, 234, 234, 0.144); */
 }
-body{
-  /* max-width: var(--body-max-width); */
+/* body{
+  /* max-width: var(--body-max-width); *
   display: var(--display-flex);
   justify-content: var(--center);
   flex-direction: var(--column);
-}
+} */
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
