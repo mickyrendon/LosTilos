@@ -8,6 +8,10 @@
     --f-weight:500;
     --btn-margin:2rem 0;
 
+    /* carousel img btn */
+    --background-none:none;
+    --border-none: none;
+
     /* menu --mobile/desktop */
     --menu-mobile-width: 80vw;
     --menu-middleScreen-width:45vw;
