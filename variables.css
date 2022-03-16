@@ -2,6 +2,7 @@
     /* global */
     --body-max-width:80vw;
     --display-flex:flex;
+    --none:none;
     --center:center;
     --column:column;
     --font-size:clamp(0.50rem, 0.70rem + 0.75vw, 1rem);

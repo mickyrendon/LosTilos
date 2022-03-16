@@ -55,13 +55,19 @@ header{
 }
 
 a{
-  text-decoration: none;
+  text-decoration:var(--none);
   color:currentColor;
 }
 h3{
   /* font-size: calc(1.3rem + 1.6vw); */
   font-size: clamp(1.5rem, 1.3rem + 1.5vw, 2rem);
   text-align: center;
+}
+.none{
+  display: var(--none);
+}
+.flex{
+  display: var(--display-flex);
 }
 /* shared properties */
 nav, .logo-text, .logo, section, footer, .address-map{   
@@ -101,10 +107,10 @@ nav{
     border: none;
   /* box-shadow: 0px 0px 0px 0px transparent; */
 }
-img, .menu-btn{
+img, .menu-btn, .back-btn{
     height:100%;
 }
-.logo, .menu-btn{
+.logo, .menu-btn, .back-btn{
     width: 2.5rem;
 }
 .logo-text, .img-logo{
@@ -114,10 +120,15 @@ img, .menu-btn{
     /* border: 1px solid #e2d7d7c7;
     border-radius: 50%; */
 }
-.menu-btn{
+.menu-btn, .back-btn{
   height: 1.5rem;
   background-color: transparent;
   border: none;
+}
+.back-btn{
+  display: none;
+  justify-content: center;
+  align-items: center;
 }
 .contact-span{
   font-family: 'Montserrat', sans-serif;
