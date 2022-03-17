@@ -1,5 +1,5 @@
 const backBtn = document.querySelector('.back-btn');
-// const menuBtn = document.querySelector('.menu-btn').style.display = 'none';
+const svgArrow = document.querySelector('.svg-arrow');
 
 const classes = [
     document.querySelector('.header'),
