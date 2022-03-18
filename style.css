@@ -424,7 +424,57 @@ iframe{
   text-align: center;
   color: #dae6cce5;
 }
-
+/* cambiar en mediaqueries */
+.gallery-container{
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  display: none;
+}
+.gallery{
+/* margin: 0 auto; */
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-auto-rows: 14vh; */
+  grid-gap:2vw;
+}
+.gallery-img-container{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: inline-block;
+  border-radius:0.2rem;
+}
+.gallery img{
+  width: fit-content;
+  border-radius:0.2rem;
+  /* height: fit-content; */
+  /* display: inline-block; */
+  overflow: hidden;
+  object-fit: cover;
+  transform:scale(1);
+  filter:brightness(0.9);
+  transition: transform 0.25s, filter 0.25s;
+}
+.gallery img:hover{
+ transform: scale(1.1);
+ filter: brightness(1.1);
+ border-radius:0.2rem;
+}
+.gallery img:nth-child(5) {
+  grid-column: 2;
+  grid-row: 1 / 3;
+}
+.gallery img:nth-child(6) {
+  grid-column: 1 / 2;
+  grid-row: 3 / 5;
+}
+.gallery img:nth-child(7) {
+  grid-column:2;
+  grid-row: 4 / 6;
+}
 /* keyframes */
 @keyframes rotate{
   10% {transform: rotate(-180deg);}
@@ -447,6 +497,8 @@ iframe{
   footer{
     padding-bottom: 0;
   }
+}
+@media(min-width:520px){
 }
 @media(min-width:520px) and (max-width:780px){
   .menu-mobile-container{
@@ -499,8 +551,31 @@ iframe{
   .logo-address{
     flex-flow: row wrap;
   }
- 
-
+  .gallery{
+    max-width: var(--max-width-desktop);
+  } 
+  .gallery{
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-auto-rows: 14vh; */
+    grid-auto-rows:auto;
+    grid-gap:2vw;
+  }
+  .gallery-img-container:nth-child(5) {
+    grid-column: 3;
+    grid-row: 1 / 3;
+  }
+  .gallery-img-container:nth-child(6) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+  }
+  .gallery-img-container:nth-child(7) {
+    grid-column:1;
+    grid-row: 4 / 6;
+  }
+  .gallery-img-container:nth-child(4) {
+    grid-column:-3 / -1;
+    grid-row: 3 / 5;
+  }
 }
 @media(min-width:781px){
   .menu-mobile-container{
@@ -511,5 +586,8 @@ iframe{
   main{
     padding:2rem;
     justify-content: center;
+  }
+  .gallery-container{
+    justify-content:center;
   }
 }

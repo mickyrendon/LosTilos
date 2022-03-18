@@ -22,6 +22,9 @@
     /* desktop */
     /* --menu-nav-height: */
     --menu-desktop-width: 35vw;
+    /* max-width-desktop */
+    --middle-width-desktop:80vw;
+    --max-width-desktop:70vw;
     /*grid */
     --grid:grid;
 }

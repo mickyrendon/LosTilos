@@ -1,5 +1,6 @@
-const backBtn = document.querySelector('.back-btn');
+const backBtn  = document.querySelector('.back-btn');
 const svgArrow = document.querySelector('.svg-arrow');
+const galleryC  = document.querySelector('.gallery-container');
 
 const classes = [
     document.querySelector('.header'),
