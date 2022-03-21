@@ -42,7 +42,7 @@
 <!--  -->
     <nav class="sticky-nav">
         <button class="menu-btn">
-            <img src="./assets/icons/menu/source_icons_menu.svg" alt="menu-icon">
+            <img src="./assets/icons/menu/source_icons_menu.svg" class="img-menu" alt="menu-icon">
         </button>
         <button class="back-btn">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="svg-arrow bi bi-arrow-left" viewBox="0 0 16 16">
@@ -71,7 +71,7 @@
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
             </div>
             <div class="carousel-inner">
-              <div class="carousel-item active">
+              <div class="carousel-item-container carousel-item active">
                 <button class="carousel-btn">
                     <img src="./assets/pictures/mesa.jpg" class="carousel-img d-block w-100" alt="mesa">
                 </button>
@@ -289,30 +289,44 @@
     <section class="gallery-container">
         <div class="gallery">
             <div class="gallery-img-container">
-                <img src="./assets/pictures/mesa.jpg" alt="mesa">
+                <img src="./assets/pictures/mesa.jpg" class="gallery-pics" alt="mesa">
             </div>
             <div class="gallery-img-container">
-                <img src="./assets/pictures/living.jpg" alt="living">
+                <img src="./assets/pictures/living.jpg" class="gallery-pics" alt="living">
             </div>
             <div class="gallery-img-container">
-                <img src="./assets/pictures/tv.jpg" alt="tv">
+                <img src="./assets/pictures/tv.jpg" class="gallery-pics" alt="tv">
             </div>
             <div class="gallery-img-container">
-                <img src="./assets/pictures/cocina.jpg" alt="cocina">
+                <img src="./assets/pictures/cocina.jpg" class="gallery-pics" alt="cocina">
             </div>
             <div class="gallery-img-container">
-                <img src="./assets/pictures/habitacion1.jpg" alt="habitación 1">
+                <img src="./assets/pictures/habitacion1.jpg" class="gallery-pics" alt="habitación 1">
             </div>
             <div class="gallery-img-container">
-                <img src="./assets/pictures/habitacion3.jpg" alt="habitación 3">
+                <img src="./assets/pictures/habitacion3.jpg" class="gallery-pics" alt="habitación 3">
             </div>
             <div class="gallery-img-container">
-                <img src="./assets/pictures/bano1.jpg" alt="bano 1">
+                <img src="./assets/pictures/bano1.jpg" class="gallery-pics" alt="bano 1">
             </div>
             <div class="gallery-img-container">
-                <img src="./assets/pictures/directv.jpg" alt="directv">
+                <img src="./assets/pictures/directv.jpg" class="gallery-pics" alt="directv">
             </div>
         </div>
+    </section>
+    <section class="slider-container">
+        <div class="gallery-img-container">
+            <img src="" id="gallery-pic-id" class="gallery-pics" alt="">
+        </div>
+        <!-- buttons by bootstrap -->
+        <button class="carousel-control-prev previous-btn" type="button"name="previous">
+            <span class="carousel-control-prev-icon" aria-hidden="true" title="previous"></span>
+            <!-- <span class="visually-hidden">Previous</span> -->
+        </button>
+        <button class="carousel-control-next next-btn" type="button" name="next">
+            <span class="carousel-control-next-icon" aria-hidden="true" title="next"></span>
+            <!-- <span class="visually-hidden">Next</span> -->
+        </button>
     </section>
 </body>
 <!-- JavaScript Bundle with Popper -->
@@ -325,6 +339,7 @@
 <script src="./app/galleryBtn.js"></script>
 <script src="./app/backBtn.js"></script>
 <script src="./app/hiddeElements.js"></script>
+<script src="./app/gallerySlider.js"></script>
 <!-- animate.css -->
 <!-- <script src="./scrollanimations.min.js"></script> -->
 </html>

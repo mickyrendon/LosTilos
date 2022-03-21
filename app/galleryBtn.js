@@ -3,8 +3,9 @@
 
 document.querySelectorAll(".carousel-img").forEach(el => {
   el.addEventListener("click", e => {
-    const src = e.target.getAttribute("src");
-    console.log(`imagen con el source ${src} clickeada `);
+    const src = e.target.getAttribute('src');
+    const name = e.target.getAttribute('alt');
+    console.log(`imagen '${name}' clickeada`);
     
     showElements()
   });

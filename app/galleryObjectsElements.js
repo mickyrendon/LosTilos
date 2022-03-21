@@ -2,6 +2,12 @@ const backBtn  = document.querySelector('.back-btn');
 const svgArrow = document.querySelector('.svg-arrow');
 const galleryC  = document.querySelector('.gallery-container');
 
+const galleryPics = document.querySelectorAll('.gallery-pics');
+const sliderContainer = document.querySelector('.slider-container');
+const galleryPicId = document.getElementById('gallery-pic-id');
+const previousBtn = document.querySelector('.previous-btn');
+const nextBtn = document.querySelector('.next-btn');
+
 const classes = [
     document.querySelector('.header'),
     document.querySelector('.nav-contact'),
