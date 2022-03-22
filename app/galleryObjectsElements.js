@@ -2,11 +2,14 @@ const backBtn  = document.querySelector('.back-btn');
 const svgArrow = document.querySelector('.svg-arrow');
 const galleryC  = document.querySelector('.gallery-container');
 
-const galleryPics = document.querySelectorAll('.gallery-pics');
+const galleryPicsArray = document.querySelectorAll('.gallery-pics');
+const galleryPics = Array.from(galleryPicsArray);
 const sliderContainer = document.querySelector('.slider-container');
 const galleryPicId = document.getElementById('gallery-pic-id');
 const previousBtn = document.querySelector('.previous-btn');
+const previousSpan = document.querySelector('.previous-span');
 const nextBtn = document.querySelector('.next-btn');
+const nextSpan = document.querySelector('.next-span');
 
 const classes = [
     document.querySelector('.header'),
@@ -14,4 +17,4 @@ const classes = [
     document.querySelector('.main'),
     document.querySelector('.footer'),
     document.querySelector('.signature')
-  ];
+];
