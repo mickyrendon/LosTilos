@@ -499,6 +499,12 @@ iframe{
   height: 100%;
   position: relative;
 }
+.previous-btn{
+  left: 2.5vh;
+}
+.next-btn{
+  right: 2.5vh;
+}
 
 /* //////////////////////////////////////////////// */
 /* keyframes */

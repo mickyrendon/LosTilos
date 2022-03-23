@@ -5,6 +5,7 @@ galleryPics.forEach( e =>{
         // conseguir el index del elemento clickeado para despues usarlo en el validador del array para los efectos de los botones// NECESITO ACCEDER AL INDEX DEL ARRAY PARA OBTENER EL VALOR Y LA UBICACION DE CADA ELEMENTO PARA QUE EL CAMBIO DE LAS IMAGENES SEAN COHERENTES
         console.log(`${galleryPics.indexOf()}`);
         sliderContainer.style.display = 'flex';
+        galleryC.style.display = 'none';
         galleryPicId.setAttribute('src', src);
         galleryPicId.setAttribute('alt', name);
         console.log(`mostrando la imagen ${name}`);
