@@ -6,6 +6,7 @@ function showElements(){
         // adding display controller 'cause toggled between flex and none whithout any reason founded
         svgArrow.style.display = 'flex';
         galleryC.style.display = 'flex';
+        gallery.classList.toggle('transition');
         menuBtn.classList.add('none');
 
         console.log(`galeria mostrada`);

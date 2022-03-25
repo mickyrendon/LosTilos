@@ -9,7 +9,8 @@ const closing = (e) => {
     opacityContainer.classList.toggle('active');
     menuContainer.classList.toggle('active');
     document.body.classList.remove('no-scroll');
-    close.classList.remove('rotate')
+    close.classList.remove('rotate');
+    close.classList.add('undo-rotate');
 
     console.log('menu plegado');
 }

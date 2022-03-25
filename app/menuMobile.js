@@ -9,7 +9,6 @@ const dropdown = () =>{
     menuContainer.classList.toggle('active');
     document.body.classList.add('no-scroll');
     close.classList.add('rotate');
-    // close.classList.toggle('undoRotate');
     
     console.log('menu desplegado');
 }

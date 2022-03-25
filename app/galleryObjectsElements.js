@@ -2,6 +2,7 @@ const stickyNav =  document.querySelector('.sticky-nav');
 const backBtn  = document.querySelector('.back-btn');
 const svgArrow = document.querySelector('.svg-arrow');
 const galleryC  = document.querySelector('.gallery-container');
+const gallery  = document.querySelector('.gallery');
 
 const galleryPicsArray = document.querySelectorAll('.gallery-pics');
 const galleryPics = Array.from(galleryPicsArray);
