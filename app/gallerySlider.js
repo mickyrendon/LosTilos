@@ -1,19 +1,21 @@
 galleryPics.forEach( e =>{
     e.addEventListener('click', e =>{
-        const src = e.target.getAttribute('src');
-        const name = e.target.getAttribute('alt');
-        //catching the src and alt attribute of gallery pic
-        galleryPicId.setAttribute('src', src);
-        galleryPicId.setAttribute('alt', name);
-        console.log(`mostrando la imagen ${name}`);
         //getting array index
         const index = galleryPics.indexOf(e.target);
         const indexValue = index + 1;
         const lastIndex = galleryPics.length;
-        picsCounter.innerHTML = `${indexValue} / ${lastIndex}`;
-        
-        console.log(`el index del elemento es: ${indexValue} y el lastindex es: ${lastIndex}`);
+        const picsCounter =  document.querySelector('.pics-counter');
+        // picsCounter.getAttribute('title');
 
+        // getting attributes
+        const src = e.target.getAttribute('src');
+        const name = e.target.getAttribute('alt');
+
+        //catching the src and alt attribute of gallery pic
+        galleryPicId.setAttribute('src', src);
+        galleryPicId.setAttribute('alt', name);
+        picsCounter.setAttribute('title', indexValue);
+        picsCounter.innerHTML = `${indexValue} / ${lastIndex}`;
         // adding class to sticky nav
         stickyNav.classList.add('gallery-slider-background');
         svgArrow.style.fill = 'white';
@@ -24,20 +26,22 @@ galleryPics.forEach( e =>{
         galleryC.style.display = 'none';
         toggleBackBtnEvnt();
         
-        arrayIndexValidator();
+        if(indexValue === lastIndex){
+            nextBtn.style.display = 'none';
+            nextSpan.style.display = 'none';
+            console.log('validacion correcta, ocultando los botones');
+        }else{
+            nextBtn.style.display = 'flex';
+            nextSpan.style.display = 'flex';
+            console.log(`la posicion del elemento en el array no es la ultima`);
+        }
+        return console.log(`el index del elemento es: ${indexValue} y el lastindex es: ${lastIndex}`);
     })
 });
 //buttons
 // al presionar el boton mostrar el hermano de atras o delante en la lista del nodo gallerypics
 function arrayIndexValidator(){
-    if(!galleryPics[0]){
-        console.log(`mostrando el 'previous btn`);
-        previousBtn.style.display = 'flex';
-        previousSpan.style.display = 'flex';
-    }else{
-       
-    }
-}
+};
 
 
 

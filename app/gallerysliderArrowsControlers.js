@@ -1,17 +1,18 @@
-var position = 0;
 previousBtn.addEventListener('click', previousBtnValidator, true);
 nextBtn.addEventListener('click', nextBtnValidator, true);
 
 function nextBtnValidator(e){
     const picSrc = galleryPicId
+    const picsCounter =  document.querySelector('.pics-counter');
+
     position = position + 1;
     //getting array index
-    // const index = galleryPics.indexOf(e.target);
-    //capturar el valor del id exacto para poder continuar
-    const index = galleryPics.indexOf(galleryPics[position]);
+    const counterId = picsCounter.getAttribute('title');
+    const index = galleryPics.indexOf(galleryPics[counterId]);
     const indexValue = index + 1;
     const lastIndex = galleryPics.length;
     picsCounter.innerHTML = `${indexValue} / ${lastIndex}`;
+    console.log(`testeando el index... ${indexValue}`);
     
     if(e){
         let positionSrc = galleryPics[index].src;
@@ -19,20 +20,40 @@ function nextBtnValidator(e){
         // getting the src of the next element
         picSrc.setAttribute('src', positionSrc);
         picSrc.setAttribute('alt', positionName);
+        picsCounter.setAttribute('title', indexValue);
     }
-    return console.log(`retornando el nombre de la imagen nueva: ${picSrc.alt} y el id: ${index}`);
+    return console.log(`retornando el nombre de la imagen nueva: ${picSrc.alt} y el id: ${indexValue}`);
 }
-
 function previousBtnValidator(e){
-    const picSrc = galleryPicId 
-   
+    const picSrc = galleryPicId
+    const picsCounter =  document.querySelector('.pics-counter');
+
+    position = position - 1;
+    //getting array index
+
+    
     if(e){
-        position = position - 1;
-        let positionSrc = galleryPics[position].src;
-        let positionName = galleryPics[position].alt;
-        // getting the src of the next element
-        picSrc.setAttribute('src', positionSrc);
-        picSrc.setAttribute('alt', positionName);
+        const counterId = picsCounter.getAttribute('title');
+        const index = galleryPics.indexOf(galleryPics[counterId]);
+        const indexValue = index -1;
+        const lastIndex = galleryPics.length;
+        picsCounter.innerHTML = `${indexValue} / ${lastIndex}`;
+        console.log(`testeando el index... ${indexValue}`);
+        if(indexValue === lastIndex){
+            nextBtn.style.display = 'none';
+            nextSpan.style.display = 'none';
+            console.log('validacion correcta, ocultando los botones');
+        }
+        // funciona pero cuando llego a la ultima imagen me tira error porque el positionSrc es undefined
+        
+            let positionSrc = galleryPics[indexValue - 1].src;
+            let positionName = galleryPics[indexValue - 1].alt;
+            // getting the src of the next element
+            picSrc.setAttribute('src', positionSrc);
+            picSrc.setAttribute('alt', positionName);
+            picsCounter.setAttribute('title', indexValue);
+
+        //}
+        return console.log(`retornando el nombre de la imagen nueva: ${picSrc.alt} y el id: ${indexValue}`);
     }
-    return console.log(`retornando el nombre de la imagen nueva: ${picSrc.alt}`);
 }
