@@ -2,14 +2,16 @@ galleryPics.forEach( e =>{
     e.addEventListener('click', e =>{
         const src = e.target.getAttribute('src');
         const name = e.target.getAttribute('alt');
+        //getting array index
         const index = galleryPics.indexOf(e.target);
+        const indexValue = index + 1;
+        const lastIndex = galleryPics.length;
+        picsCounter.innerHTML = `${indexValue} / ${lastIndex}`
+        console.log(`el index del elemento es: ${indexValue} y el lastindex es: ${lastIndex}`);
         //catching the src and alt attribute of gallery pic
         galleryPicId.setAttribute('src', src);
         galleryPicId.setAttribute('alt', name);
         console.log(`mostrando la imagen ${name}`);
-        // conseguir el index del elemento clickeado para despues usarlo en el validador del array para los efectos de los botones// NECESITO ACCEDER AL INDEX DEL ARRAY PARA OBTENER EL VALOR Y LA UBICACION DE CADA ELEMENTO PARA QUE EL CAMBIO DE LAS IMAGENES SEAN COHERENTES
-        // console.log(`${galleryPics.indexOf()}`);
-        console.log(`mostrando el index del elemento ${index}`);
 
         // adding class to sticky nav
         stickyNav.classList.add('gallery-slider-background');

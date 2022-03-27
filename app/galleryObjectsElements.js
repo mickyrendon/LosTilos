@@ -8,6 +8,9 @@ const galleryPicsArray = document.querySelectorAll('.gallery-pics');
 const galleryPics = Array.from(galleryPicsArray);
 const sliderContainer = document.querySelector('.slider-container');
 const galleryPicId = document.getElementById('gallery-pic-id');
+//pics counter
+var picsCounter =  document.querySelector('.pics-counter');
+// controlers
 const previousBtn = document.querySelector('.previous-btn');
 const previousSpan = document.querySelector('.previous-span');
 const nextBtn = document.querySelector('.next-btn');
