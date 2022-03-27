@@ -454,9 +454,9 @@ iframe{
   grid-template-columns: repeat(2, 1fr);
   /* grid-auto-rows: 14vh; */
   grid-gap:2vw;
-  position: absolute;
-  top:100vh;  
-  transition: var(--transition);
+  /* position: absolute; */
+  /* top:100vh;   */
+  /* transition: var(--transition); */
 }
 .gallery.transition{
   top:7vh;
