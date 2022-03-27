@@ -2,16 +2,17 @@ galleryPics.forEach( e =>{
     e.addEventListener('click', e =>{
         const src = e.target.getAttribute('src');
         const name = e.target.getAttribute('alt');
-        //getting array index
-        const index = galleryPics.indexOf(e.target);
-        const indexValue = index + 1;
-        const lastIndex = galleryPics.length;
-        picsCounter.innerHTML = `${indexValue} / ${lastIndex}`
-        console.log(`el index del elemento es: ${indexValue} y el lastindex es: ${lastIndex}`);
         //catching the src and alt attribute of gallery pic
         galleryPicId.setAttribute('src', src);
         galleryPicId.setAttribute('alt', name);
         console.log(`mostrando la imagen ${name}`);
+        //getting array index
+        const index = galleryPics.indexOf(e.target);
+        const indexValue = index + 1;
+        const lastIndex = galleryPics.length;
+        picsCounter.innerHTML = `${indexValue} / ${lastIndex}`;
+        
+        console.log(`el index del elemento es: ${indexValue} y el lastindex es: ${lastIndex}`);
 
         // adding class to sticky nav
         stickyNav.classList.add('gallery-slider-background');
@@ -26,7 +27,6 @@ galleryPics.forEach( e =>{
         arrayIndexValidator();
     })
 });
-var position = 0;
 //buttons
 // al presionar el boton mostrar el hermano de atras o delante en la lista del nodo gallerypics
 function arrayIndexValidator(){
