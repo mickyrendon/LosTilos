@@ -29,10 +29,17 @@ galleryPics.forEach( e =>{
         if(indexValue === lastIndex){
             nextBtn.style.display = 'none';
             nextSpan.style.display = 'none';
-            console.log('validacion correcta, ocultando los botones');
+            console.log(`ocultando el boton 'siguiente'`);
+
+        }else if(indexValue === 1){
+            previousBtn.style.display = 'none';
+            previousSpan.style.display = 'none';
+            console.log(`ocultando el boton 'anterior'`);
         }else{
             nextBtn.style.display = 'flex';
             nextSpan.style.display = 'flex';
+            previousBtn.style.display = 'flex';
+            previousSpan.style.display = 'flex';
             console.log(`la posicion del elemento en el array no es la ultima`);
         }
         return console.log(`el index del elemento es: ${indexValue} y el lastindex es: ${lastIndex}`);

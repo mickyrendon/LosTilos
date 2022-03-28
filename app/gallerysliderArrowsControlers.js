@@ -24,6 +24,7 @@ function nextBtnValidator(e){
     }
     return console.log(`retornando el nombre de la imagen nueva: ${picSrc.alt} y el id: ${indexValue}`);
 }
+// la funcion anda a medias porque cuando estoy en la ultima imagen y quiero ir a la anterior me da error y aparece un -2 en el contador
 function previousBtnValidator(e){
     const picSrc = galleryPicId
     const picsCounter =  document.querySelector('.pics-counter');
