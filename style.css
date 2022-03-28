@@ -100,25 +100,24 @@ nav{
   margin: var(--btn-margin);  
 }
 .nav-contact{
-    margin-top: 0;
-    padding: 0;
-    height: auto;
-    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25882352941176473);
-    border: none;
+  margin-top: 0;
+  padding: 0;
+  height: auto;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25882352941176473);
+  border: none;
   /* box-shadow: 0px 0px 0px 0px transparent; */
 }
 .menu-btn, .img-menu, .back-btn{
-    height:100%;
+  height:100%;
 }
 .logo, .menu-btn, .back-btn{
-    width: 2.5rem;
+  width: 2.5rem;
 }
-.logo-text, .img-logo{
-    height: 2.5rem;
-    /* width: 2.5rem;/ */
-    /* overflow: hidden; */
-    /* border: 1px solid #e2d7d7c7;
-    border-radius: 50%; */
+.logo-text{
+  height: 2.5rem;
+}
+.img-logo{
+  height: 3.5rem;
 }
 .menu-btn, .back-btn{
   height: 1.5rem;
