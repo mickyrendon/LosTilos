@@ -21,40 +21,50 @@ function nextBtnValidator(e){
         picSrc.setAttribute('src', positionSrc);
         picSrc.setAttribute('alt', positionName);
         picsCounter.setAttribute('title', indexValue);
+
+        if( previousBtn.style.display === 'none'){
+            previousBtn.style.display = 'flex';
+            previousSpan.style.display = 'flex';
+            console.log(`mostrando el boton 'anterior'`);
+        }else if(indexValue === lastIndex){
+            nextBtn.style.display = 'none';
+            nextSpan.style.display = 'none';
+            console.log(`ultima imagen, ocultando el boton next`);
+        }
     }
     return console.log(`retornando el nombre de la imagen nueva: ${picSrc.alt} y el id: ${indexValue}`);
 }
-// la funcion anda a medias porque cuando estoy en la ultima imagen y quiero ir a la anterior me da error y aparece un -2 en el contador
+
 function previousBtnValidator(e){
     const picSrc = galleryPicId
     const picsCounter =  document.querySelector('.pics-counter');
 
     position = position - 1;
     //getting array index
+    const counterId = picsCounter.getAttribute('title');
+    // const index = galleryPics.indexOf(galleryPics[counterId]);
+    const indexValue = counterId -1 //index -1;
+    const lastIndex = galleryPics.length;
+    picsCounter.innerHTML = `${indexValue} / ${lastIndex}`;
+    console.log(`testeando el index... ${indexValue}`);
 
-    
     if(e){
-        const counterId = picsCounter.getAttribute('title');
-        const index = galleryPics.indexOf(galleryPics[counterId]);
-        const indexValue = index -1;
-        const lastIndex = galleryPics.length;
-        picsCounter.innerHTML = `${indexValue} / ${lastIndex}`;
-        console.log(`testeando el index... ${indexValue}`);
-        if(indexValue === lastIndex){
-            nextBtn.style.display = 'none';
-            nextSpan.style.display = 'none';
-            console.log('validacion correcta, ocultando los botones');
-        }
-        // funciona pero cuando llego a la ultima imagen me tira error porque el positionSrc es undefined
+        let positionSrc = galleryPics[indexValue - 1].src;
+        let positionName = galleryPics[indexValue - 1].alt;
+        // getting the src of the next element
+        picSrc.setAttribute('src', positionSrc);
+        picSrc.setAttribute('alt', positionName);
+        picsCounter.setAttribute('title', indexValue);
         
-            let positionSrc = galleryPics[indexValue - 1].src;
-            let positionName = galleryPics[indexValue - 1].alt;
-            // getting the src of the next element
-            picSrc.setAttribute('src', positionSrc);
-            picSrc.setAttribute('alt', positionName);
-            picsCounter.setAttribute('title', indexValue);
-
-        //}
-        return console.log(`retornando el nombre de la imagen nueva: ${picSrc.alt} y el id: ${indexValue}`);
+        if( nextBtn.style.display === 'none'){
+            nextBtn.style.display = 'flex';
+            nextSpan.style.display = 'flex';
+            console.log(`mostrando el boton 'siguiente'`);
+        }else if(indexValue === 1){
+            previousBtn.style.display = 'none';
+            previousSpan.style.display = 'none';
+            console.log(`primera imagen, ocultando el boton previous`);
+        }
     }
+    return console.log(`retornando el nombre de la imagen nueva: ${picSrc.alt} y el id: ${indexValue}`);
 }

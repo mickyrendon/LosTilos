@@ -5,12 +5,9 @@ galleryPics.forEach( e =>{
         const indexValue = index + 1;
         const lastIndex = galleryPics.length;
         const picsCounter =  document.querySelector('.pics-counter');
-        // picsCounter.getAttribute('title');
-
         // getting attributes
         const src = e.target.getAttribute('src');
         const name = e.target.getAttribute('alt');
-
         //catching the src and alt attribute of gallery pic
         galleryPicId.setAttribute('src', src);
         galleryPicId.setAttribute('alt', name);
@@ -45,10 +42,6 @@ galleryPics.forEach( e =>{
         return console.log(`el index del elemento es: ${indexValue} y el lastindex es: ${lastIndex}`);
     })
 });
-//buttons
-// al presionar el boton mostrar el hermano de atras o delante en la lista del nodo gallerypics
-function arrayIndexValidator(){
-};
 
 
 
