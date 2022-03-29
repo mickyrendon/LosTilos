@@ -564,11 +564,6 @@ iframe{
     margin: 0 1rem 1rem;
   }
 }
-@media(min-width:400px){
-  footer{
-    padding-bottom: 0;
-  }
-}
 @media(min-width:520px){
   .slider-container{
     padding: 1rem;
