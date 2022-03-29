@@ -21,21 +21,21 @@
             <img class="menu-scale" src="./assets/icons/menu/source_icons_menu-scale.svg" alt="menu-scale-icon">
         </button>
         <ul class="ul-list">
-            <a href="#us" class="us-anchor">
-                <li>Nosotros</li>
-            </a>
-            <a href="#services" class="services-anchor">
-                <li>Servicios</li>
-            </a>
-            <a href="#rates" class="products-anchor">
-                <li>Tarifas y medios de pago</li>
-            </a>
-            <a href="#questions" class="questions-anchor">
-                <li>Consultas</li>
-            </a>
-            <a href="#address" class="contact-anchor">
-                <li>Dirección</li>
-            </a>
+            <li>
+                <a href="#us" class="us-anchor">Nosotros</a>
+            </li>
+            <li>
+                <a href="#services" class="services-anchor">Servicios</a>
+            </li>
+            <li>
+                <a href="#rates" class="products-anchor">Tarifas y medios de pago</a>
+            </li>
+            <li>
+                <a href="#questions" class="questions-anchor">Consultas</a>
+            </li>
+            <li>
+                <a href="#address" class="contact-anchor">Dirección</a>
+            </li>
         </ul>
     </div>
     <div class="opacity-container"></div>
@@ -123,9 +123,9 @@
           </div>
     </header>
     <nav class="nav-contact">
-        <button class="custom-btn contact-btn">
-            <a href="#questions"><span class="contact-span">Reservar</span></a>
-        </button>
+        <a href="#questions" class="custom-btn contact-btn ctm-btn-a">
+            <span class="contact-span">Reservar</span>
+        </a>
     </nav>
     <main class="main">
         <section id="us" class="description">
@@ -234,8 +234,7 @@
                     <img src="./assets/icons/services/security-camera.png" alt="security-camera-icon">
                     <span>Camaras de seguridad</span>
                 </li>
-                <br>
-                <li class="asterisco-container">
+                <li id="asterisco-container" class="asterisco-container">
                     <i>* Consultar</i>
                 </li>
             </ul>
@@ -256,20 +255,18 @@
                 </li>
             </ul>
         </section>
-        <section id="questions" class="contact">
+        <div id="questions" class="contact">
             <img class="profile-pic" src="./assets/circleProfile.png" alt="profile pic">
-              <article>
+            <article>
                 <h3>Hola soy Lorenzo!</h3>
                 <p>Como anfitrión quiero que mis huespedes se sientan en un ambiente cómodo y familiar, pueden coordinar conmigo para recibirlos.
                 Estoy a disposición ante cualquier eventualidad.
                 </p>
-                <button class="custom-btn contact-btn">
-                    <a href="https://wa.me/+56993475062">
-                        <span class="contact-span">whatsapp</span>
-                    </a>
-                </button>
-              </article>
-        </section>
+                <a href="https://wa.me/+56993475062" class="custom-btn contact-btn ctm-btn-a">
+                    <span class="contact-span">whatsapp</span>
+                </a>
+            </article>
+        </div>
     </main>
     <footer id="address" class="footer">
         <div class="logo-address">
@@ -286,7 +283,7 @@
     <nav class="signature">
         <span>Developed by <a href="">MR | Miguel Rendón</a></span>
     </nav>
-    <section class="gallery-container">
+    <div class="gallery-container">
         <div class="gallery">
             <div class="gallery-img-container">
                 <img src="./assets/pictures/mesa.jpg" class="gallery-pics" alt="mesa">
@@ -313,37 +310,37 @@
                 <img src="./assets/pictures/directv.jpg" class="gallery-pics" alt="directv">
             </div>
         </div>
-    </section>
-    <section class="slider-container">
+    </div>
+    <div class="slider-container">
         <span class="pics-counter"></span>
         <!-- buttons by bootstrap -->
         <div class="gallery-img-container">
-            <button class="carousel-control-prev previous-btn" type="button"name="previous">
+            <button class="carousel-control-prev previous-btn" type="button" name="previous">
                 <span class="carousel-control-prev-icon previous-span" aria-hidden="true" title="previous"></span>
                 <!-- <span class="visually-hidden">Previous</span> -->
             </button>
-            <img src="" id="gallery-pic-id" class="" alt="">
+            <img src="./assets/logo/losTilosLogo.png" id="gallery-pic-id" alt="los tilos">
             <button class="carousel-control-next next-btn" type="button" name="next">
                 <span class="carousel-control-next-icon next-span" aria-hidden="true" title="next"></span>
                 <!-- <span class="visually-hidden">Next</span> -->
             </button>
         </div>
-    </section>
+    </div>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="./app/galleryObjectsElements.js"></script>
+    <!-- <script src="./app/onLoad.js"></script> -->
+    <script src="./app/menuMobile.js"></script>
+    <script src="./app/closeBtn.js"></script>
+    <script src="./app/showElements.js"></script>
+    <script src="./app/galleryBtn.js"></script>
+    <script src="./app/hiddeElements.js"></script>
+    <script src="./app/backBtn.js"></script>
+    <script src="./app/gallerySlider.js"></script>
+    <script src="./app/gallerysliderArrowsControlers.js"></script>
+    <script src="./app/toggleBackBtnEvnt.js"></script>
+    <script src="./app/backToGallery.js"></script>
+    <!-- animate.css -->
+    <!-- <script src="./scrollanimations.min.js"></script> -->
 </body>
-<!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<script src="./app/galleryObjectsElements.js"></script>
-<!-- <script src="./app/onLoad.js"></script> -->
-<script src="./app/menuMobile.js"></script>
-<script src="./app/closeBtn.js"></script>
-<script src="./app/showElements.js"></script>
-<script src="./app/galleryBtn.js"></script>
-<script src="./app/hiddeElements.js"></script>
-<script src="./app/backBtn.js"></script>
-<script src="./app/gallerySlider.js"></script>
-<script src="./app/gallerysliderArrowsControlers.js"></script>
-<script src="./app/toggleBackBtnEvnt.js"></script>
-<script src="./app/backToGallery.js"></script>
-<!-- animate.css -->
-<!-- <script src="./scrollanimations.min.js"></script> -->
 </html>
