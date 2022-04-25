@@ -436,11 +436,15 @@ iframe{
 /* cambiar a flex-end en el mediaquery */
   justify-content: center;
 }
-.signature span, .signature a{
+.signature span, .signature a, .layer_1{
   padding: 0;
   font-size: calc(0.6rem + .2vw);
   text-align: center;
   color: #dae6cce5;
+}
+.layer_1{
+  width: 2.5rem;
+  height: 2rem;
 }
 /* cambiar en mediaqueries */
 .gallery-container{
