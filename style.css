@@ -14,6 +14,7 @@
   font-weight:var(--f-weight);
   letter-spacing:0.2rem;
   /* background: rgba(243, 234, 234, 0.144); */
+  scroll-behavior: smooth;
 }
 /* reset */
 img{
