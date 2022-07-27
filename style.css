@@ -164,7 +164,8 @@ nav{
   border-right: 0.5px solid rgba(168, 168, 168, 0.877);
   z-index: 7;
   scroll-behavior: unset;
-  transition: all 0.4s linear;
+  /* transition: all 0.4s linear; */
+  transition: all 0.4s cubic-bezier(.65,.05,.36,1);
 }
 /* .opacity-container.active, .menu-mobile-container.active{
 } */
@@ -590,7 +591,7 @@ iframe{
 }
 @media(min-width:800px){
   .carousel, main {
-    width: 90vw;
+    width: 80vw;
   }
   .carousel{
     border-radius: 0.2rem;
@@ -611,7 +612,7 @@ iframe{
     margin: 0 auto;
     display:grid;
     grid-auto-rows: minmax(10em, auto);
-    grid-template-columns: auto 50vw;
+    grid-template-columns: 50vw auto;
     writing-mode:horizontal-tb;
     gap: 2vw;
     box-shadow: none;
@@ -622,9 +623,9 @@ iframe{
     justify-content: flex-start;
   }
   #services{
-    /* grid-column:1 / -1; */
-    /* grid-column-start: 1;
+    /* grid-column:1 / -1; 
     grid-column-end: 2; */
+    grid-column-start: 2;
     grid-row-start: 1;
     grid-row-end: 4;
   }
