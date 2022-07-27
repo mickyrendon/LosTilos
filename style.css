@@ -2,6 +2,7 @@
   font-family: Cinzel;
   src: url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative') format('woff2');
 }
+
 *{
   margin: 0;
   padding: 0;
@@ -68,6 +69,11 @@ h3{
 }
 .flex{
   display: var(--display-flex);
+}
+section span, p{
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 1.1rem;
+  color: rgba(0, 0, 0, 0.651);
 }
 /* shared properties */
 nav, .logo-text, .logo, section, .contact, footer, .address-map, .slider-container{   
