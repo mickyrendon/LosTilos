@@ -73,7 +73,8 @@ h3{
 section span, p{
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 1.1rem;
-  color: rgba(0, 0, 0, 0.651);
+  letter-spacing:0.1rem;
+  color: rgba(0, 0, 0, 0.774);
 }
 /* shared properties */
 nav, .logo-text, .logo, section, .contact, footer, .address-map, .slider-container{   
@@ -250,9 +251,10 @@ nav{
   /* cambiar a un medida apropiada/ em, rem, ch */
   line-height: 42px;
   text-align: center;
-  color: antiquewhite;
-  background:#da983f;
-  background: linear-gradient(0deg, #da973fb0 0%, #da973f 100%);
+  /* color: antiquewhite; */
+  color: #fcfdfe;
+  background:#7e5012;
+  /* background: linear-gradient(0deg, #e28d24 0%, #dbae77 100%); */
   border: none;
 }
 .contact-btn span {
@@ -267,7 +269,8 @@ nav{
     content: "";
     right: 0;
     top: 0;
-    background: #537c01b4;
+    /* background: #537c01b4; */
+    background: #3b8205cc;
     transition: all 0.3s ease;
   }
 .contact-btn:before {
@@ -289,7 +292,7 @@ nav{
     width: 100%;
   }
 .contact-btn span:hover, .ctm-btn-a:hover{
-     color:#674203;
+     color:#7e5012;
   }
 .contact-btn span:before,
 .contact-btn span:after {
@@ -298,7 +301,7 @@ nav{
     left: 0;
     bottom: 0;
      /* background: rgba(2,126,251,1); */
-    background: #537c01b4;
+    background: #3b8205cc;
     transition: all 0.3s ease;
   }
 .contact-btn span:before {
@@ -408,7 +411,8 @@ footer{
   justify-content: space-evenly;
 }
 footer, .signature{
-  background-color: #55762fc2;
+  /* background-color: #55762fc2; */
+  background-color: #0c0f1f;
 }
 .img-footer{
   width: 8rem;
