@@ -441,7 +441,7 @@ footer, .signature{
 } */
 /* cambiar mediaquery de addres-map */
 iframe{
-  width: 12rem;
+  width: 20rem;
   border-radius:0.2rem;
 }
 .signature{
