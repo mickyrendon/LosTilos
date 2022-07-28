@@ -34,13 +34,13 @@ function nextBtnValidator(e){
         if(indexValue === lastIndex){
             nextBtn.disabled = true;
             nextSpan.disabled = true;
-            previousBtn.disabled = false;
-            previousSpan.disabled = false;
+            // previousBtn.disabled = false;
+            // previousSpan.disabled = false;
         }else{
             nextBtn.disabled = false;
             nextSpan.disabled = false;
-            previousBtn.disabled = true;
-            previousSpan.disabled = true;
+            previousBtn.disabled = false;
+            previousSpan.disabled = false;
         }
     }
     return console.log(`retornando el nombre de la imagen nueva: ${picSrc.alt} y el id: ${indexValue}`);
@@ -49,7 +49,6 @@ function nextBtnValidator(e){
 function previousBtnValidator(e){
     const picSrc = galleryPicId
     const picsCounter =  document.querySelector('.pics-counter');
-
     position = position - 1;
     //getting array index
     const counterId = picsCounter.getAttribute('title');
@@ -58,7 +57,7 @@ function previousBtnValidator(e){
     const lastIndex = galleryPics.length;
     picsCounter.innerHTML = `${indexValue} / ${lastIndex}`;
     console.log(`testeando el index... ${indexValue}`);
-
+  
     if(e){
         let positionSrc = galleryPics[indexValue - 1].src;
         let positionName = galleryPics[indexValue - 1].alt;
@@ -79,13 +78,13 @@ function previousBtnValidator(e){
         if(indexValue === 1){
             previousBtn.disabled = true;
             previousSpan.disabled = true;
-            nextBtn.disabled = false;
-            nextSpan.disabled = false;
+            // nextBtn.disabled = false;
+            // nextSpan.disabled = false;
         }else{
             previousBtn.disabled = false;
             previousSpan.disabled = false;
-            nextBtn.disabled = true;
-            nextSpan.disabled = true;
+            nextBtn.disabled = false;
+            nextSpan.disabled = false;
         }
     }
     return console.log(`retornando el nombre de la imagen nueva: ${picSrc.alt} y el id: ${indexValue}`);

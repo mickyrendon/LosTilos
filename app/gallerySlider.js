@@ -23,26 +23,32 @@ galleryPics.forEach( e =>{
         galleryC.style.display = 'none';
         toggleBackBtnEvnt();
         
+        // if i choose the last pic  then next btn is disabled & the previous btn is enabled
         if(indexValue === lastIndex){
             // nextBtn.style.display = 'none';
             // nextSpan.style.display = 'none';
             nextBtn.disabled = true;
-            nextSpan.disabled = true;
+            previousBtn.disabled = false;
+            // nextSpan.disabled = true;
             console.log(`ocultando el boton 'siguiente'`);
 
+        // if i choose the first pic  then previous btn is disabled & the next btn is enabled
         }else if(indexValue === 1){
             // previousBtn.style.display = 'none';
             // previousSpan.style.display = 'none';
             previousBtn.disabled = true;
-            previousSpan.disabled = true;
+            nextBtn.disabled = false;
+            // previousSpan.disabled = true;
             console.log(`ocultando el boton 'anterior'`);
+
+        // if i choose whatever picture between the first or the last picture, btns will be enabled
         }else{
             // nextBtn.style.display = 'flex';
             // nextSpan.style.display = 'flex';
             nextBtn.disabled = false;
-            nextSpan.disabled = false;
             previousBtn.disabled = false;
-            previousSpan.disabled = false;
+            // nextSpan.disabled = false;
+            // previousSpan.disabled = false;
             // previousBtn.style.display = 'flex';
             // previousSpan.style.display = 'flex';
             console.log(`la posicion del elemento en el array no es la ultima`);
