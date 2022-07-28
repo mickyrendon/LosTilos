@@ -21,7 +21,7 @@ function nextBtnValidator(e){
         picSrc.setAttribute('src', positionSrc);
         picSrc.setAttribute('alt', positionName);
         picsCounter.setAttribute('title', indexValue);
-
+        
         if( previousBtn.style.display === 'none'){
             previousBtn.style.display = 'flex';
             previousSpan.style.display = 'flex';
