@@ -24,19 +24,27 @@ galleryPics.forEach( e =>{
         toggleBackBtnEvnt();
         
         if(indexValue === lastIndex){
-            nextBtn.style.display = 'none';
-            nextSpan.style.display = 'none';
+            // nextBtn.style.display = 'none';
+            // nextSpan.style.display = 'none';
+            nextBtn.disabled = true;
+            nextSpan.disabled = true;
             console.log(`ocultando el boton 'siguiente'`);
 
         }else if(indexValue === 1){
-            previousBtn.style.display = 'none';
-            previousSpan.style.display = 'none';
+            // previousBtn.style.display = 'none';
+            // previousSpan.style.display = 'none';
+            previousBtn.disabled = true;
+            previousSpan.disabled = true;
             console.log(`ocultando el boton 'anterior'`);
         }else{
-            nextBtn.style.display = 'flex';
-            nextSpan.style.display = 'flex';
-            previousBtn.style.display = 'flex';
-            previousSpan.style.display = 'flex';
+            // nextBtn.style.display = 'flex';
+            // nextSpan.style.display = 'flex';
+            nextBtn.disabled = false;
+            nextSpan.disabled = false;
+            previousBtn.disabled = false;
+            previousSpan.disabled = false;
+            // previousBtn.style.display = 'flex';
+            // previousSpan.style.display = 'flex';
             console.log(`la posicion del elemento en el array no es la ultima`);
         }
         return console.log(`el index del elemento es: ${indexValue} y el lastindex es: ${lastIndex}`);

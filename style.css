@@ -554,6 +554,7 @@ iframe{
 .gallery-img-container{
   display: flex;
   justify-content: center;
+  object-fit: contain;
   flex-flow: row nowrap;
 }
 .previous-btn, .next-btn{

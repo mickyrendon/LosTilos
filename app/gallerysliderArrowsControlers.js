@@ -21,15 +21,26 @@ function nextBtnValidator(e){
         picSrc.setAttribute('src', positionSrc);
         picSrc.setAttribute('alt', positionName);
         picsCounter.setAttribute('title', indexValue);
-        
-        if( previousBtn.style.display === 'none'){
-            previousBtn.style.display = 'flex';
-            previousSpan.style.display = 'flex';
-            console.log(`mostrando el boton 'anterior'`);
-        }else if(indexValue === lastIndex){
-            nextBtn.style.display = 'none';
-            nextSpan.style.display = 'none';
-            console.log(`ultima imagen, ocultando el boton next`);
+
+        // if( previousBtn.style.display === 'none'){
+        //     previousBtn.style.display = 'flex';
+        //     previousSpan.style.display = 'flex';
+        //     console.log(`mostrando el boton 'anterior'`);
+        // }else if(indexValue === lastIndex){
+        //     nextBtn.style.display = 'none';
+        //     nextSpan.style.display = 'none';
+        //     console.log(`ultima imagen, ocultando el boton next`);
+        // }
+        if(indexValue === lastIndex){
+            nextBtn.disabled = true;
+            nextSpan.disabled = true;
+            previousBtn.disabled = false;
+            previousSpan.disabled = false;
+        }else{
+            nextBtn.disabled = false;
+            nextSpan.disabled = false;
+            previousBtn.disabled = true;
+            previousSpan.disabled = true;
         }
     }
     return console.log(`retornando el nombre de la imagen nueva: ${picSrc.alt} y el id: ${indexValue}`);
@@ -56,14 +67,25 @@ function previousBtnValidator(e){
         picSrc.setAttribute('alt', positionName);
         picsCounter.setAttribute('title', indexValue);
         
-        if( nextBtn.style.display === 'none'){
-            nextBtn.style.display = 'flex';
-            nextSpan.style.display = 'flex';
-            console.log(`mostrando el boton 'siguiente'`);
-        }else if(indexValue === 1){
-            previousBtn.style.display = 'none';
-            previousSpan.style.display = 'none';
-            console.log(`primera imagen, ocultando el boton previous`);
+        // if( nextBtn.style.display === 'none'){
+        //     nextBtn.style.display = 'flex';
+        //     nextSpan.style.display = 'flex';
+        //     console.log(`mostrando el boton 'siguiente'`);
+        // }else if(indexValue === 1){
+        //     previousBtn.style.display = 'none';
+        //     previousSpan.style.display = 'none';
+        //     console.log(`primera imagen, ocultando el boton previous`);
+        // }
+        if(indexValue === 1){
+            previousBtn.disabled = true;
+            previousSpan.disabled = true;
+            nextBtn.disabled = false;
+            nextSpan.disabled = false;
+        }else{
+            previousBtn.disabled = false;
+            previousSpan.disabled = false;
+            nextBtn.disabled = true;
+            nextSpan.disabled = true;
         }
     }
     return console.log(`retornando el nombre de la imagen nueva: ${picSrc.alt} y el id: ${indexValue}`);
