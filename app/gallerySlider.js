@@ -22,7 +22,8 @@ galleryPics.forEach( e =>{
         //hidding gallery section
         galleryC.style.display = 'none';
         toggleBackBtnEvnt();
-        
+
+     
         // if i choose the last pic  then next btn is disabled & the previous btn is enabled
         if(indexValue === lastIndex){
             // nextBtn.style.display = 'none';
@@ -56,6 +57,7 @@ galleryPics.forEach( e =>{
         return console.log(`el index del elemento es: ${indexValue} y el lastindex es: ${lastIndex}`);
     })
 });
+
 
 
 
