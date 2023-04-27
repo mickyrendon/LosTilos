@@ -21,16 +21,16 @@ const displayScrollElement = (element) => {
   element.classList.add("scrolled");
 };
 
-const hideScrollElement = (element) => {
-  element.classList.remove("scrolled");
-};
+// const hideScrollElement = (element) => {
+//   element.classList.remove("scrolled");
+// };
 
 const handleScrollAnimation = () => {
   scrollElements.forEach((el) => {
     if (elementInView(el, 1.25)) {
       displayScrollElement(el);
     } else if (elementOutofView(el)) {
-      hideScrollElement(el)
+      // hideScrollElement(el)
     }
   })
 }

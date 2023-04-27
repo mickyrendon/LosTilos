@@ -89,7 +89,8 @@ function previousBtnValidator(e){
     }
     return console.log(`retornando el nombre de la imagen nueva: ${picSrc.alt} y el id: ${indexValue}`);
 }
-const slider = new Swiper('.gallery-img-container', {
+// trying swipper library
+/* const slider = new Swiper('.gallery-img-container', {
     loop: true,
     navigation: {
         nextEl: '.next-btn',
@@ -98,4 +99,4 @@ const slider = new Swiper('.gallery-img-container', {
     // pagination: {
     //     el: '.swiper-pagination',
     // },
-});
+}); */
